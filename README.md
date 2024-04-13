@@ -1,5 +1,9 @@
 # LaTeX-Vorlage für Abschlussarbeiten 
 
+
+##  GERNE WEITERGEBEN, FORKEN UND ÄNDERUNGEN PER PR HINZUFÜGEN :) 
+
+
 Die Vorlage wurde von ursprünglich Andreas Männle zur Verfügung gestellt. Vielen Dank! 
 Als Compiler ist Latexmk zu verwenden. Siehe Datei makefile
 
