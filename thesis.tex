@@ -1,0 +1,104 @@
+% Preambel mit Einstellungen importieren
+\input{preambel}
+
+% Dokumenteninfos importieren
+% In docinfo.tex sind Titel, Autor, Abstract zu definieren
+\input{docinfo.tex}
+\input{glossar.tex}
+
+% Literatur-Datenbank
+\addbibresource{literatur.bib}   % BibLaTeX-Datei mit Literaturquellen einbinden
+
+\begin{document}
+    \frontmatter
+    
+    % Römische Ziffern für die "Front-Matter"
+    \pagenumbering{Roman}
+    \setcounter{page}{0}
+    \changefont{ptm}{m}{n}  % Times New Roman für den Fließtext
+    \renewcommand{\rmdefault}{ptm}
+    
+    % Titelblatt
+    \input{titelblatt}
+    
+    %\listoftodos
+
+    
+    % Inhaltsverzeichnis erzeugen
+    \cleardoublepage
+    \pdfbookmark{\contentsname}{Contents}
+    \tableofcontents
+    
+    % Korrigiert Nummerierung bei mehrseitigem Inhaltsverzeichnis
+    \cleardoublepage
+    \newcounter{frontmatterpage}
+    \setcounter{frontmatterpage}{\value{page}}
+    
+    % Arabische Zahlen für den Hauptteil
+    \mainmatter
+    
+    % Den Hauptteil mit vergrößertem Zeilenabstand setzen
+    \onehalfspacing
+    
+    % ------------------------------------------------------------------
+    % Hauptteil der Arbeit
+    \input{kapitel/1.Einleitung} % Externe Datei einbinden
+    \input{kapitel/2.Grundlagen}
+    \input{kapitel/3.aaa}
+    \input{kapitel/4.bbb}
+    \input{kapitel/5.Ergebnis}
+    % ------------------------------------------------------------------
+    
+    \label{lastpage}
+    
+    % Neue Seite
+    \cleardoublepage
+    
+    % Backmatter mit normalem Zeilenabstand setzen
+    \singlespacing
+    
+    % Römische Ziffern für die "Back-Matter", fortlaufend mit "Front-Matter"
+    \pagenumbering{Roman}
+    \setcounter{page}{\value{frontmatterpage}}
+    %\setcounter{page}{0}
+
+    % Abkürzungsverzeichnis
+    \cleardoublepage
+    \phantomsection
+    \printnoidxglossary[type=\acronymtype,title=Abkürzungsverzeichnis,nonumberlist]
+    \printnoidxglossary[title=Glossarverzeichnis,nonumberlist]
+    
+    % Tabellenverzeichnis erzeugen
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{\hsmalistoftables}
+    \listoftables
+    
+    % Abbildungsverzeichnis erzeugen
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{\hsmalistoffigures}
+    \listoffigures
+    
+    % Listingverzeichnis erzeugen - Quellcode falls vorhanden
+    \cleardoublepage
+    \phantomsection
+    \addcontentsline{toc}{chapter}{\hsmalistings}
+    \lstlistoflistings
+    
+    %Literaturverzeichnis erzeugen
+    \begin{flushleft}
+        \printbibliography
+    \end{flushleft}
+        
+    % Index ausgeben. Wenn Sie keinen Index haben, entfernen Sie einfach diesen Teil.
+    %\cleardoublepage
+    %\phantomsection
+    %\addcontentsline{toc}{chapter}{\hsmaindex}
+    %\printindex
+    
+    % Anhang. Wenn Sie keinen Anhang haben, entfernen Sie einfach
+    % diesen Teil.
+    \appendix
+    \input{kapitel/A.Anhang}
+\end{document}

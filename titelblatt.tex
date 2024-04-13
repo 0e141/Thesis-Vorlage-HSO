@@ -1,0 +1,282 @@
+% -------------------------------------------------------
+% In dieser Datei sollten eigentlich keine Veränderungen mehr
+% notwendig sein.
+% -------------------------------------------------------
+
+\thispagestyle{empty}
+
+% Fakultät
+% -------------------------------------------------------
+%Deprecated since name change - use only if actually needed
+\ifthenelse{\equal{\hsmafakultaet}{EI}}%
+  {\newcommand{\hsmafakultaetlangde}{Fakultät Elektrotechnik und Informationstechnik}%
+   \newcommand{\hsmafakultaetlangen}{Department of Electrical Engineering and Computer Science}}{}
+
+%New name
+\ifthenelse{\equal{\hsmafakultaet}{EMI}}%
+{\newcommand{\hsmafakultaetlangde}{Fakultät Elektrotechnik, Medizintechnik und Informatik}%
+	\newcommand{\hsmafakultaetlangen}{Department of Electrical Engineering, Medical Engineering and Computer Science}}{}
+	
+%Deprecated since name change - use only if actually needed
+\ifthenelse{\equal{\hsmafakultaet}{MI}}%
+{\newcommand{\hsmafakultaetlangde}{Fakultät Medien und Informationswesen}%
+	\newcommand{\hsmafakultaetlangen}{Department of Media and Information Systems}}{}
+
+%New name	
+\ifthenelse{\equal{\hsmafakultaet}{M}}%
+{\newcommand{\hsmafakultaetlangde}{Fakultät Medien}%
+	\newcommand{\hsmafakultaetlangen}{Department of Media}}{}
+
+% Studiengänge
+% -------------------------------------------------------
+\ifthenelse{\equal{\hsmastudiengang}{AI}}%
+{\newcommand{\hsmastudienganglangde}{Angewandte Informatik}%
+	\newcommand{\hsmastudienganglangen}{Applied Computer Science}%
+	\newcommand{\hsmatypde}{BACHELORTHESIS}%
+	\newcommand{\hsmatypen}{BACHELORTHESIS}%
+	\newcommand{\hsmagrad}{\hsmabachelor}}{}
+
+\ifthenelse{\equal{\hsmastudiengang}{EI}}%
+{\newcommand{\hsmastudienganglangde}{Elektrotechnik/Informationstechnik}%
+	\newcommand{\hsmastudienganglangen}{Electrical Engineering/Information Technology}%
+	\newcommand{\hsmatypde}{BACHELORTHESIS}%
+	\newcommand{\hsmatypen}{BACHELORTHESIS}%
+	\newcommand{\hsmagrad}{\hsmabachelor}}{}
+
+\ifthenelse{\equal{\hsmastudiengang}{MK}}%
+{\newcommand{\hsmastudienganglangde}{Mechatronik}%
+	\newcommand{\hsmastudienganglangen}{Mechatronics}%
+	\newcommand{\hsmatypde}{BACHELORTHESIS}%
+	\newcommand{\hsmatypen}{BACHELORTHESIS}%
+	\newcommand{\hsmagrad}{\hsmabachelor}}{}
+
+\ifthenelse{\equal{\hsmastudiengang}{INFM}}%
+  {\newcommand{\hsmastudienganglangde}{Informatik Master}%
+  \newcommand{\hsmastudienganglangen}{Computer Science Master}%
+  \newcommand{\hsmatypde}{MASTERTHESIS}%
+  \newcommand{\hsmatypen}{MASTER THESIS}%
+  \newcommand{\hsmagrad}{\hsmamaster}}{}
+  
+\ifthenelse{\equal{\hsmastudiengang}{UNITS}}%
+  {\newcommand{\hsmastudienganglangde}{Unternehmens- und IT-Sicherheit}%
+  \newcommand{\hsmastudienganglangen}{Corporate and IT Security}%
+  \newcommand{\hsmatypde}{BACHELORTHESIS}%
+  \newcommand{\hsmatypen}{BACHELORTHESIS}%
+  \newcommand{\hsmagrad}{\hsmabachelor}}{}
+
+\ifthenelse{\equal{\hsmastudiengang}{ENITS}}%
+  {\newcommand{\hsmastudienganglangde}{Enterprise- and IT-Security}%
+  \newcommand{\hsmastudienganglangen}{Enterprise- and IT-Security}%
+  \newcommand{\hsmatypde}{MASTERTHESIS}%
+  \newcommand{\hsmatypen}{MASTER THESIS}%
+  \newcommand{\hsmagrad}{\hsmamaster}}{}
+
+\newcommand{\hsmamaster}{Master of Science (M.Sc.)}
+
+\newcommand{\hsmabachelor}{Bachelor of Science (B.Sc.)}
+
+
+\newcommand{\hsmakoerperschaftde}{Hochschule für Technik, Wirtschaft und Medien Offenburg}
+\newcommand{\hsmakoerperschaften}{Offenburg University}
+
+\newcommand{\hsmaautorbib}{\hsmaautornname, \hsmaautorvname} % Autor Nachname, Vorname
+\newcommand{\hsmaautor}{\hsmaautorvname \ \hsmaautornname} % Autor Vorname Nachname
+
+\ifthenelse{\equal{\hsmasprache}{de}}%
+  {\newcommand{\hsmatyp}{\hsmatypde}%
+   \newcommand{\hsmathesistype}{zur Erlangung des akademischen Grades \hsmagrad}%
+   \newcommand{\hsmakoerperschaft}{\hsmakoerperschaftde}%
+   \newcommand{\hsmastudiengangname}{Studiengang \hsmastudienganglangde}%
+   \newcommand{\hsmastudienganglang}{\hsmastudienganglangde}%
+   \newcommand{\hsmatitel}{\hsmatitelde}%
+   \newcommand{\hsmatutor}{Betreuer}%
+   \newcommand{\hsmafakultaetlang}{\hsmafakultaetlangde}%
+   \newcommand{\hsmalistoftables}{Tabellenverzeichnis}%
+   \newcommand{\hsmalistoffigures}{Abbildungsverzeichnis}%
+   \newcommand{\hsmalistings}{Quellcodeverzeichnis}%
+   \newcommand{\hsmaindex}{Index}%
+   \newcommand{\hsmaabbreviations}{Abkürzungsverzeichnis}%
+   \newcommand{\hsmafirmantext}{Durchgeführt bei der}%
+   \selectlanguage{ngerman}}%
+  {\newcommand{\hsmatyp}{\hsmatypen}%
+   \newcommand{\hsmathesistype}{for the acquisition of the academic degree \hsmagrad}%
+   \newcommand{\hsmakoerperschaft}{\hsmakoerperschaften}%
+   \newcommand{\hsmastudiengangname}{Course of Studies: \hsmastudienganglang}%
+   \newcommand{\hsmastudienganglang}{\hsmastudienganglangen}%
+   \newcommand{\hsmatitel}{\hsmatitelen}%
+   \newcommand{\hsmatutor}{Tutors}
+   \newcommand{\hsmafakultaetlang}{\hsmafakultaetlangen}%
+   \newcommand{\hsmalistoftables}{List of Tables}%
+   \newcommand{\hsmalistoffigures}{List of Figures}%
+   \newcommand{\hsmalistings}{Listings}%
+   \newcommand{\hsmaindex}{Index}%
+   \newcommand{\hsmaabbreviations}{List of Abbreviations}%
+   \newcommand{\hsmafirmantext}{Conducted at}%
+   \selectlanguage{english}}%
+
+
+% Daten in die Standard-Felder von KOMA-Script eintragen
+\titlehead{\hsmatyp\ in\  \hsmastudienganglang}
+\subject{}
+\title{\hsmatitel}
+\author{\hsmaauthor}
+\date{\small{\hsmadatum}}
+
+% Daten für das fertige PDF-Dokument
+\hypersetup{
+  pdftitle={\hsmatitel},  % Titel des Dokuments
+  pdfauthor={\hsmaautor},              % Autor
+  pdfsubject={\hsmatyp\ in\ \hsmastudienganglang},                % Thema
+  pdfkeywords={\hsmatitel}         % Schlüsselworte
+}
+
+\newlength{\bindekorrektur}
+\newlength{\seitenanfang}
+\newlength{\seitenbreite}
+  
+\setlength{\bindekorrektur}{-46mm}   % Korrektur der horizontalen Position
+\setlength{\seitenanfang}{0mm}       % Korrektur der vertikalen Position
+\setlength{\seitenbreite}{297mm}
+
+\captionsetup[figure]{labelformat=empty}
+\noindent 
+\begin{figure}[H]
+	\includegraphics[width=6cm,center]{HSO.png}
+ %Wenn ein Unternehmenslogo mit abgedruckt werden soll,
+ %kann dies wie folgt integriert werden.	
+	%\begin{subfigure}[t][][c]{0.5\textwidth}
+	%	\includegraphics[width=4cm, left]{HSO.png}
+	%\end{subfigure}
+	%\begin{subfigure}[t][][c]{0.5\textwidth}
+	%	\centering
+	%	\includegraphics[width=4.5cm, right]{aramido-logo.png}
+	%end{subfigure} 
+	%\caption[]{}
+\end{figure}
+\captionsetup[figure]{labelformat=simple}
+
+
+% Titel der Arbeit
+\begin{textblock*}{128mm}(41mm,\seitenanfang + 62mm) % 4,5cm vom linken Rand und 6,0cm vom oberen Rand
+  \centering\Large\sffamily
+  \vspace{12mm} % Kleiner zusätzlicher Abstand oben für bessere Optik
+  \textbf{\hsmatitel}
+\end{textblock*}%
+
+% Name
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 108mm)
+  \centering\large\sffamily
+  \hsmaautor
+\end{textblock*}
+
+% Thesis
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 130mm)
+  \centering\large\sffamily
+  \textbf{\hsmatyp}\\
+  \begin{small}\hsmathesistype \end{small}\\
+  \vspace{6mm}
+  \hsmastudiengangname
+\end{textblock*}
+
+% Fakultät
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 165mm)
+  \centering\large\sffamily
+  \hsmafakultaetlang\\
+  \vspace{2mm}
+  \hsmakoerperschaft
+\end{textblock*}
+
+% Datum
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 190mm)
+  \centering\large 
+  \textsf{\hsmadatum}
+\end{textblock*}
+
+% Firma
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 215mm)
+  \centering\large 
+  \textsf{\hsmafirmantext\ \hsmafirma}
+\end{textblock*}
+
+% Betreuer
+\begin{textblock*}{\seitenbreite}(\bindekorrektur,\seitenanfang + 240mm)
+  \centering\large\sffamily
+  \hsmatutor \\
+  \vspace{2mm}
+  \hsmabetreuer\\
+  \vspace{2mm}
+  \hsmazweitkorrektor
+\end{textblock*}
+
+% Bibliographische Informationen
+\null\newpage
+\thispagestyle{empty}
+
+  
+\newcommand{\hsmabibde}{\begin{small}\textbf{\hsmaautorbib}: \\ \hsmatitelde \ / \hsmaautor. \ -- \\ \hsmatypde, \hsmaort : \hsmakoerperschaftde, \hsmajahr. \pageref{lastpage} Seiten.\end{small}}
+
+\newcommand{\hsmabiben}{\begin{small}\textbf{\hsmaautorbib}: \\ \hsmatitelen \ / \hsmaautor. \ -- \\ \hsmatypen, \hsmaort : \hsmakoerperschaften, \hsmajahr. \pageref{lastpage} pages. \end{small}}
+
+\ifthenelse{\equal{\hsmasprache}{de}}%
+  {\hsmabibde \\ \vspace{0.5cm} \\ \hsmabiben}
+  {\hsmabiben \\ \vspace{0.5cm} \\ \hsmabibde}
+
+
+% Vorwort
+\clearpage\setcounter{page}{1}
+%\textsf{\large\textbf{Vorwort}}
+%\\
+%Danksagungen
+
+%\vspace{1cm}
+%\hsmaort, \hsmadatum\\
+%\hsmaautor
+%\\
+%\\
+%\\
+% Genderhinweis
+\textsf{\large\textbf{Hinweis zu geschlechtsneutralen Pronomen}}
+\\
+\\
+In dieser Arbeit wird aus Gründen der besseren Lesbarkeit das generische Maskulinum verwendet. Weibliche und anderweitige Geschlechteridentitäten werden dabei ausdrücklich mitgemeint, soweit es für die Aussage erforderlich ist.
+
+% Eid. Erklärung
+\clearpage
+\textsf{\large\textbf{Eidesstattliche Erklärung}}
+\\
+\\
+Hiermit versichere ich eidesstattlich, dass die vorliegende Bachelorthesis von mir selbstständig und ohne unerlaubte fremde Hilfe angefertigt worden ist, insbesondere, dass ich alle Stellen, die wörtlich oder annähernd wörtlich oder dem Gedanken nach aus Veröffentlichungen, unveröffentlichten Unterlagen und Gesprächen entnommen worden sind, als solche an den entsprechenden Stellen innerhalb der Arbeit durch Zitate kenntlich gemacht habe, wobei in den Zitaten jeweils der Umfang der entnommenen Originalzitate kenntlich gemacht wurde. Ich bin mir bewusst, dass eine falsche Versicherung rechtliche Folgen haben wird.
+
+\ifthenelse{\boolean{hsmapublizieren} \and \not\boolean{hsmasperrvermerk}}%
+{
+\vspace{0.5cm}
+Ich bin damit einverstanden, dass meine Arbeit veröffentlicht wird, d. h. dass die Arbeit elektronisch gespeichert, in andere Formate konvertiert, auf den Servern der Hochschule \hsmaort\ öffentlich zugänglich gemacht und über das Internet verbreitet werden darf.
+}{}%
+
+\vspace{1cm}
+\hsmaort, \hsmadatum\\
+
+\vspace{1.2cm}						                                      
+\hsmaautor
+\\
+\\
+\\
+
+\ifthenelse{\boolean{hsmasperrvermerk}}%
+{%
+\vspace{5cm}
+\color{red}\textsf{\large\textbf{Sperrvermerk}}
+
+Die vorliegende Abschlussarbeit beinhaltet vertrauliche Informationen und interne Daten des Unternehmens \hsmafirma.
+Sie darf aus diesem Grund nur zu Prüfzwecken verwendet und ohne ausdrückliche Genehmigung durch die \hsmafirma\ weder Dritten zugänglich gemacht, noch ganz oder in Auszügen veröffentlicht werden. Die Sperrfrist endet 5 Jahre Jahre nach dem Einreichen der Arbeit bei der Hochschule Offenburg. Unbeschadet hiervon bleibt die Weitergabe der Arbeit und Einsicht in die Arbeit an die mit der Prüfung befassten Mitarbeiter der Hochschule und Prüfer möglich, die ihrerseits zur Geheimhaltung verpflichtet sind, sowie die Verwendung der Arbeit in eventuellen prüfungsrechtlichen Rechtsschutzverfahren nach Maßgabe der geltenden verwaltungsprozessualen Regeln.
+\color{black}
+}{}
+
+\cleardoublepage
+
+% Abstract
+\textsf{\large\textbf{Zusammenfassung}}
+\subsubsection*{\hsmatitelde}\hsmaabstractde
+% \clearpage
+\textsf{\large\textbf{Abstract}}
+\subsubsection*{\hsmatitelen}\hsmaabstracten
