@@ -1,16 +1,15 @@
 # LaTeX-Vorlage für Abschlussarbeiten 
 
-Die Vorlage wurde von Andreas Männle zur Verfügung gestellt. Vielen Dank! 
+Die Vorlage wurde von ursprünglich Andreas Männle zur Verfügung gestellt. Vielen Dank! 
 Als Compiler ist Latexmk zu verwenden. Siehe Datei makefile
-Anregungen und Hinweise zur Optimierung der Vorlage senden Sie an stephan.trahasch@hs-offenburg.de
 
-_A/N Husky: Ich habe die Vorlage angepasst, dass sie ebenfalls für UNITS verwendet werden kann. Die Fehler waren vor meinen Änderungen schon vorhanden haha. 
-Zudem habe ich die readme die ihr jetzt gerade lest ein bisschen ausgeführt, um euch die Sucherei zu ersparen die ich machen musste.
-Fast alle Kommentare, die ihr innerhalb den Dateien sieht, wurden von Andreas Männle oder Trahasch getätigt, also kann ich euch leider dazu nichts sagen.
+Die Vorlage wurde durch verschiedene Personen angepasst, dass sie ebenfalls für UNITS und ENITS verwendet werden kann.
+
+Ich habe die Vorlage zuletzt von Selin aka. "Husky" :)
+
+Viele Fehler der originalen Vorlage wurden durch mich behoben und viele Verbesserungen und Individualisierungen vorgenommen.
 
 Die originale Vorlage kann man auf https://gitlab.com/emi-hsog/vorlage-abschlussarbeit-latex finden.
-
-Viel Erfolg, und seid nicht so dumm wie ich und fangt früher an zu schreiben LOL_
 
 ## preambel.tex
 Hier werden alle Packages eingebunden, sowie die komplette Formatierung von dem Dokument vorgenommen. Änderungen sind hier nicht notwendig.

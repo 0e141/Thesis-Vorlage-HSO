@@ -10,6 +10,7 @@
     twoside=off,            % Für doppelseitigen Druck auf on stellen, off für einseitig
     DIV=7,                  % Verhältnis der Ränder zum bedruckten Bereich
     chapterprefix=false,     % Kapitel x vor dem Kapitelnamen
+    numbers=noendperiod,    % kein Punkt am Ende der Nummerierung
     %cleardoublepage=plain
     ]{scrbook}
     
@@ -37,7 +38,8 @@
 \usepackage[absolute]{textpos}	  % Absolute Textpositionen (für Deckblatt)
 \usepackage{calc}                 % Berechnung von Positionen
 \usepackage{blindtext}            % Blindtexte
-\usepackage[bottom=40mm,left=35mm,right=35mm,top=30mm]{geometry} % Ränder ändern
+%\usepackage[bottom=40mm,left=35mm,right=35mm,top=30mm]{geometry} % Ränder ändern
+\usepackage[left=30mm,right=25mm,top=25mm,bottom=25mm]{geometry} % Ränder ändern
 \usepackage{setspace}             % Abstände korrigieren
 \usepackage{ifthen}               % Logische Bedingungen mit ifthenelse
 \usepackage{scrhack}              % Get rid of tocbasic warnings
@@ -144,7 +146,7 @@
 
 % Einstellungen für Überschriften
 \renewcommand*{\chapterformat}{%
-  \Large~\thechapter. ~   		% Große Schrift
+  \Large~\thechapter ~   		    % Große Schrift ohne Punkt am Ende
   \vspace{0.3cm}               	% Abstand zum Titel des Kapitels
 }
 
