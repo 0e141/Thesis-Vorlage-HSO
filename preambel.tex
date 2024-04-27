@@ -207,14 +207,30 @@
 \fontfamily{#1} \fontseries{#2} \fontshape{#3} \selectfont}
 
 % Eigenes Makro für Bilder
-\newcommand{\bild}[4]{
+\newcommand{\bild}[3]{
 \begin{figure}[H]
   \centering
-  \includegraphics[width=#2]{#1}
-  \caption[#3]{#4}
+  \includegraphics[width=\textwidth]{#1}
+  \caption[#2]{#3}
   \label{fig:#1}
 \end{figure}}
 
+\newcommand{\bildinbild}[5]{
+\begin{figure}[H]
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{#1}
+        \caption{#2}
+    \end{subfigure}\hfill
+    \begin{subfigure}{0.4\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{#3}
+        \caption{#4}
+    \end{subfigure}
+
+    \caption{#5}
+    \label{fig:#1}
+\end{figure}}
 % Wo liegt Sourcecode?
 \newcommand{\srcloc}{src/}
 
